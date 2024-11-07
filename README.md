@@ -9,6 +9,7 @@
 - **File Sharing**: Upload and download files up to 100 MB securely.
 - **Voice Calling**: Initiate voice calls directly within the application.
 - **User-Friendly Interface**: Intuitive design for easy navigation and usage.
+- **Volatile Storage**: All chat history, files, and user data are deleted after users leave the room, ensuring privacy and security.
 
 ## Tech Stack
 
@@ -46,7 +47,7 @@
      npm run dev
      ```
 
-4. Open your browser and navigate to `http://localhost:5000`.
+4. Open your browser and navigate to `http://localhost:3000`.
 
 ## Usage
 
