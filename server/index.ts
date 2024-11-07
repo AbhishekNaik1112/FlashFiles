@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app: Application = express();
-const PORT = process.env.PORT || 4001;
+const PORT: string | number = process.env.PORT || 4001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

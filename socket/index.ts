@@ -1,8 +1,7 @@
-require("dotenv").config();
-
-import express from "express";
+import "dotenv/config";
+import express, { Request, Response } from "express";
 import { createServer } from "http";
-import { Server } from "socket.io";
+import { Server, Socket } from "socket.io";
 import registerSocketEvents from "./events/registerSocketEvents";
 
 const app = express();
@@ -14,7 +13,7 @@ const io = new Server(httpServer, {
   },
 });
 
-io.on("connection", (socket) => {
+io.on("connection", (socket: Socket) => {
   console.log(`User connected: ${socket.id}`);
   registerSocketEvents(socket);
 
@@ -23,7 +22,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 5001;
+const PORT: string | number = process.env.PORT || 5001;
 httpServer.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

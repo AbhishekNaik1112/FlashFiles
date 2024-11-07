@@ -1,3 +1,3 @@
-const connectToDatabase = require("./connectToDatabase");
+import connectToDatabase from "./connectToDatabase";
 
 connectToDatabase();
