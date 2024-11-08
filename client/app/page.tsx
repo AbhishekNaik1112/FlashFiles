@@ -1,9 +1,16 @@
-// import Image from "next/image";
+'use client';
 
-export default function Home() {
+import Home from "@/pages/Home";
+import "./globals.css";
+
+const Page: React.FC = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div>
+        <Home />
+      </div>
+    </>
   );
 }
+
+export default Page;
