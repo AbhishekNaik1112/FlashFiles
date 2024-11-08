@@ -18,15 +18,17 @@ export default function JoinRoom() {
     if (roomId.includes('?roomId=')) {
       try {
         const url = new URL(roomId);
+        console.log(url);
         finalRoomId = url.searchParams.get('roomId') || ''; 
       } catch (error) {
+        console.log(error);  
         alert(error);
         return;
       }
     }
 
     if (finalRoomId) {
-      router.push(`/RoomPage?roomId=${finalRoomId}`);
+      router.push(`/DummyRoom?roomId=${finalRoomId}`);
     } else {
       alert('Invalid room link or ID');
     }
