@@ -9,45 +9,79 @@
 - **File Sharing**: Upload and download files up to 100 MB securely.
 - **Voice Calling**: Initiate voice calls directly within the application.
 - **User-Friendly Interface**: Intuitive design for easy navigation and usage.
-- **Volatile Storage**: All chat history, files, and user data are deleted after users leave the room, ensuring privacy and security.
+- **Volatile Storage**: All chat history, files, and user data are deleted after users leave the room or the host ends it, ensuring privacy and security.
 
 ## Tech Stack
 
-- **Frontend**: Next.js with TypeScript
+- **Frontend**:
+  - Next.js with TypeScript
+  - Tailwind CSS
 - **Backend**:
   - Node.js with Express
+  - Socket.IO and WebRTC for messaging and voice chat.
+  - Cloud Storage - Firebase
 
 ## Installation
 
 1. **Clone the repository**:
+
    ```bash
-   git clone https://github.com/yourusername/FileFlow.git
-   cd FileFlow
+   git clone https://github.com/AbhishekNaik1112/FlashFiles.git
+   cd FlashFiles
    ```
 
-2. **Set up the backend**:
-   - Navigate to the `backend` directory.
+2. **Set up the server**:
+
+   - Navigate to the `server` directory.
+   - Create a new `.env` file and enter your `PORT`.
    - Install dependencies:
      ```bash
-     npm install
+     npm i
      ```
    - Start the server:
      ```bash
-     node index.js
+     npm run server
      ```
 
-3. **Set up the frontend**:
+3. **Set up the database**:
+
+   - Navigate to the `database` directory.
+   - Create a new `.env` file and enter your `FIREBASE_CREDENTIALS`.
+   - Install dependencies:
+     ```bash
+     npm i
+     ```
+   - Start the server:
+     ```bash
+     npm run database
+     ```
+
+4. **Set up the socket**:
+
+   - Navigate to the `socket` directory.
+   - Create a new `.env` file and enter your `PORT`.
+   - Install dependencies:
+     ```bash
+     npm i
+     ```
+   - Start the server:
+     ```bash
+     npm run socket
+     ```
+
+5. **Set up the frontend**:
+
    - Navigate to the `frontend` directory.
    - Install dependencies:
      ```bash
-     npm install
+     npm i
      ```
    - Start the Next.js app:
      ```bash
-     npm run dev
+     npm run client
      ```
 
-4. Open your browser and navigate to `http://localhost:3000`.
+6. Open your browser and navigate to `http://localhost:3000`.
 
 ## Usage
 
